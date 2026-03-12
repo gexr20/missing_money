@@ -69,6 +69,15 @@ df_agg = df.groupby("Tech_6", as_index=False)[num_cols].sum()
 df_agg = df_agg.rename(columns={"Tech_6": "Technology"})
 df_agg["Diff_1"] = df_agg["Rev1"] + df_agg["Sub1"] - df_agg["VarCost1"] - df_agg["InvCost"]
 df_agg["Diff_2"] = df_agg["Rev2"] - df_agg["VarCost2"] - df_agg["InvCost"]
+df_agg["Rev1_per_MWh"] = df_agg["Rev1"] / df_agg["Gen1"]
+df_agg["Sub1_per_MWh"] = df_agg["Sub1"] / df_agg["Gen1"]
+df_agg["Rev2_per_MWh"] = df_agg["Rev2"] / df_agg["Gen2"]
+
+df_agg["MM_rev_per_MWh"] = df_agg["MM_rev_based"] / df_agg["Gen2"]
+df_agg["MM_margin_per_MWh"] = df_agg["MM_margin_based"] / df_agg["Gen2"]
+
+df_agg["Diff_1_per_MWh"] = df_agg["Diff_1"] / df_agg["Gen1"]
+df_agg["Diff_2_per_MWh"] = df_agg["Diff_2"] / df_agg["Gen2"]
 
 keep_cols = [
     "Technology",
@@ -84,6 +93,13 @@ keep_cols = [
     "MM_margin_based",
     "Diff_1",
     "Diff_2",
+    "Rev1_per_MWh",
+    "Sub1_per_MWh",
+    "Rev2_per_MWh",
+    "MM_rev_per_MWh",
+    "MM_margin_per_MWh",
+    "Diff_1_per_MWh",
+    "Diff_2_per_MWh",
 ]
 
 df_agg = df_agg[keep_cols]
