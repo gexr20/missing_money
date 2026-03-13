@@ -40,15 +40,21 @@ This scenario is used for **missing money calculation with a tighter solver conf
 
 - `tech_1st_sub_only_missing_money.py`
 
-After running this script, place the following scripts inside the generated `Results` folder and execute them sequentially:
+After running this script, place the following scripts inside the generated result folder and execute them sequentially:
 
 1. `Sum_by_tech.py`
 2. `plot_dualaxis.py`
 
-Additional analysis:
+For analysis with per MWh, run the following scripts inside the same result folder sequentially:
+
+1. 'perMWh_by_tech.py'
+2. 'perMWh_plot.py'
+
+Additional analysis that considers different OPEX in 2 stages can be run with the following codes:
 
 - `tech_missing_money_sanity_check.py`
 
-After running this script, place the following script in the generated `Results` folder:
+After running this script, run the following scripts inside the same result folder sequentially:
 
-- `tech_aggregate_result.py`
+1.  `perMWh_tech_aggregate.py`
+2.  'plot.py'
