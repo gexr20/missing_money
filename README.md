@@ -51,7 +51,7 @@ run_xxx_scenario/                  # outer folder
 
 
 
-### Scenario Info: `run_nuclear_all_eu_evflex_8k_pathway_2050_DE_NRT_NF_SN`
+### Scenario: `run_nuclear_all_eu_evflex_8k_pathway_2050_DE_NRT_NF_SN`
 
 Contains the **same scripts as the WRT scenario**, with file names adjusted for the NRT case.
 
