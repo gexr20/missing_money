@@ -7,7 +7,33 @@
 
 ---
 
-## Code Structure
+### Folder Structure Note
+
+All scripts are located in the **outer scenario folder** (e.g. as provided in `Xinran_duals`).
+
+When executed, the scripts generate a `Results` folder inside the **inner scenario folder** (with the same scenario name), at the same level as:
+
+- `CentIv_2050/`
+- `InvestmentRun_2050/`
+
+### Example
+
+```bash
+run_xxx_scenario/                  # outer folder
+│
+├── OpCost_MarGen_fast.py
+├── post_analysis_saturation_1st.py
+├── ...
+│
+└── run_xxx_scenario/              # inner folder
+    │
+    ├── CentIv_2050/
+    ├── InvestmentRun_2050/
+    └── Results/                  # generated automatically by scripts
+
+---
+
+### Code Structure
 
 ### Scenario: `run_nuclear_all_eu_evflex_8k_pathway_2050_DE_WRT_NF_SN`
 
@@ -24,13 +50,12 @@
 - `post_analysis_saturation_2nd.py`
 - `Post_analysis_marginal_gen.py`
 
----
 
-### Scenario: `run_nuclear_all_eu_evflex_8k_pathway_2050_DE_NRT_NF_SN`
+
+### Scenario Info: `run_nuclear_all_eu_evflex_8k_pathway_2050_DE_NRT_NF_SN`
 
 Contains the **same scripts as the WRT scenario**, with file names adjusted for the NRT case.
 
----
 
 ### Scenario: `tight_nuclear_all_eu_evflex_8k_pathway_2050_DE_WRT_NF_SN`
 
