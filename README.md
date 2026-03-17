@@ -30,9 +30,8 @@ run_xxx_scenario/                  # outer folder
     ├── CentIv_2050/
     ├── InvestmentRun_2050/
     └── Results/                  # generated automatically by scripts
-
+```
 ---
-
 ### Code Structure
 
 ### Scenario: `run_nuclear_all_eu_evflex_8k_pathway_2050_DE_WRT_NF_SN`
